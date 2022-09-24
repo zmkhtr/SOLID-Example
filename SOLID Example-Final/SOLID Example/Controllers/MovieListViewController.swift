@@ -13,6 +13,8 @@ class MovieListViewController: UITableViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    var loader: MovieLoader?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,23 +28,15 @@ class MovieListViewController: UITableViewController {
     private func getMovieList() {
         hideErrorLabel()
         refreshControl?.beginRefreshing()
-        let url = URL(string: "https://ghibliapi.herokuapp.com/films")!
-     
-        URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
+        loader?.get { result in
                 self.refreshControl?.endRefreshing()
-
-                do {
-                    let decoder = JSONDecoder()
-                    let movies = try decoder.decode([RemoteMovie].self, from: data!)
-                    self.bindData(with: movies)
-                    
-                } catch let error {
+                switch result {
+                case let .success(movies):
+                        self.bindData(with: movies)
+                case let .failure(error):
                     self.showErrorLabel(message: error.localizedDescription)
                 }
-            }
-        }.resume()
+        }
     }
     
     private func showErrorLabel(message: String) {
