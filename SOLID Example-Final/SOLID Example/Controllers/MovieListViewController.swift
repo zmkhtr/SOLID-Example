@@ -19,6 +19,7 @@ class MovieListViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         getMovieList()
+        print("Movie List View Controller loaded")
     }
     
     @IBAction func onRefresh(_ sender: UIRefreshControl) {
