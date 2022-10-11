@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         let url = URL(string: "https://ghibliapi.herokuapp.com/films")!
         let httpClient = URLSessionHTTPClient(session: URLSession(configuration: .default))
-        let loader = RemoteMovieLoader(url: url, client: httpClient)
+        let loader = LocalMovieLoader()
         window?.rootViewController = makeMovieListViewController(with: MainQueueDispatchDecorator(decoratee: loader))
         window?.makeKeyAndVisible()
     }
