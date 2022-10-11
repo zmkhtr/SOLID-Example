@@ -20,6 +20,7 @@
 		BFDB79BF28DEB9810044F0CD /* MovieItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB79BE28DEB9810044F0CD /* MovieItemMapper.swift */; };
 		BFDB79C128DEBD3D0044F0CD /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB79C028DEBD3D0044F0CD /* HTTPClient.swift */; };
 		BFDB79C328DEBD510044F0CD /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB79C228DEBD510044F0CD /* URLSessionHTTPClient.swift */; };
+		BFF6316B28F5B23D006B18B1 /* LocalMovieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6316A28F5B23D006B18B1 /* LocalMovieLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BFDB79BE28DEB9810044F0CD /* MovieItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemMapper.swift; sourceTree = "<group>"; };
 		BFDB79C028DEBD3D0044F0CD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		BFDB79C228DEBD510044F0CD /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		BFF6316A28F5B23D006B18B1 /* LocalMovieLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMovieLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				BFB1DD1628DCAE3C0099C6CC /* Assets.xcassets */,
 				BFB1DD1828DCAE3C0099C6CC /* LaunchScreen.storyboard */,
 				BFB1DD1B28DCAE3C0099C6CC /* Info.plist */,
+				BFF6316A28F5B23D006B18B1 /* LocalMovieLoader.swift */,
 			);
 			path = "SOLID Example";
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				BFDB79BF28DEB9810044F0CD /* MovieItemMapper.swift in Sources */,
 				BFDB79C128DEBD3D0044F0CD /* HTTPClient.swift in Sources */,
 				BFDB79BD28DEB8090044F0CD /* RemoteMovieLoader.swift in Sources */,
+				BFF6316B28F5B23D006B18B1 /* LocalMovieLoader.swift in Sources */,
 				BFB1DD1028DCAE3C0099C6CC /* SceneDelegate.swift in Sources */,
 				BFDB79BA28DEB70F0044F0CD /* MovieLoader.swift in Sources */,
 			);
